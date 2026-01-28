@@ -1,19 +1,28 @@
 import React from 'react';
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image } from "react-native";
 
 /*Can create style sheets, which is like CSS in html*/
 /*Can have all styles in your sheet with identifierss*/
 const style = StyleSheet.create({
-  title: {
+  main: {
     //then you write CSS like stuff in here
-    color: 'black',
-    marginTop: 16,
-    borderWidth: 3,
-    padding: 3,
-    backgroundColor: '#61dafb',
-    fontSize: 30,
-    fontWeight: 'bold',
+    backgroundColor: 'white',
+    alignItems: "center",
+    padding: 20,
+    flex: 1,
+    flexDirection: 'column',
   },
+
+  header: {
+    flex: 1,
+  },
+
+  test: {
+    flex: 1,
+    backgroundColor: 'blue',
+  }
+
+
 });
 
 export default function Index() {
@@ -23,16 +32,16 @@ export default function Index() {
     /*a view is basically the UI, the screen the user sees
     the style is self contained in the view tag*/
     <View
-      style={{
-        backgroundColor: 'white',
-        justifyContent: "center",
-        alignItems: "center",
+      style={style.main}
 
 
-      }}
     >
+      <Image style={style.header}
+        source={require('/home/callum/ReactNative/firstApp/firstApp/assets/images/inTune-header.jpg')}
 
-      <Text style={style.title}>InTune Shawlands</Text>
+      />
+      <Text style={style.test}> Welcome!</Text>
+
 
     </View>
   );

@@ -8,9 +8,9 @@ const style = StyleSheet.create({
         //then you write CSS like stuff in here
         backgroundColor: 'white',
         alignItems: "center",
+        justifyContent: "center",
         padding: 20,
         flex: 1,
-        flexDirection: 'column',
     },
 
 
@@ -24,8 +24,6 @@ export default function Index() {
         the style is self contained in the view tag*/
         <View
             style={style.main}
-
-
         >
             <Text> About Me Page</Text>
         </View>

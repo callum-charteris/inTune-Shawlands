@@ -43,9 +43,6 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <MaterialIcons size={28} name="star" color={color} />,
         }}
       />
-
-
-
     </Tabs>
   );
 }

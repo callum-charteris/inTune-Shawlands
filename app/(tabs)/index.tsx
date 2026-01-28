@@ -13,16 +13,6 @@ const style = StyleSheet.create({
     flexDirection: 'column',
   },
 
-  header: {
-    flex: 1,
-  },
-
-  test: {
-    flex: 1,
-    backgroundColor: 'blue',
-  }
-
-
 });
 
 export default function Index() {
@@ -36,13 +26,7 @@ export default function Index() {
 
 
     >
-      <Image style={style.header}
-        source={require('/home/callum/ReactNative/firstApp/firstApp/assets/images/inTune-header.jpg')}
-
-      />
-      <Text style={style.test}> Welcome!</Text>
-
-
+      <Text>Home Page</Text>
     </View>
   );
 }

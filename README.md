@@ -1,9 +1,8 @@
 # InTune Shawlands ReactNative Replica
----
+
 InTune Shawlands is a Glasgow-based tutoring service that I created a simple website for, using wordpress. The aim of this project is to create a replica of the website for an IOS application, with the key takeaway from the project being to understand and build knowledge using ReactNative.
 
 This project can be ran using Expo. Below are instruction to run the app through ExpoGo
----
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 

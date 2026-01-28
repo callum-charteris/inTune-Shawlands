@@ -1,5 +1,7 @@
-import React from 'react';
-import { Text, View, StyleSheet, Image } from "react-native";
+import * as React from 'react';
+import { Text, View, StyleSheet } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 /*Can create style sheets, which is like CSS in html*/
 /*Can have all styles in your sheet with identifierss*/
@@ -8,41 +10,30 @@ const style = StyleSheet.create({
     //then you write CSS like stuff in here
     backgroundColor: 'white',
     alignItems: "center",
+    justifyContent: 'center',
     padding: 20,
     flex: 1,
     flexDirection: 'column',
   },
-
-  header: {
-    flex: 1,
-  },
-
-  test: {
-    flex: 1,
-    backgroundColor: 'blue',
-  }
-
-
 });
 
-export default function Index() {
+function HomeScreen() {
   return (
-
-
-    /*a view is basically the UI, the screen the user sees
-    the style is self contained in the view tag*/
-    <View
-      style={style.main}
-
-
-    >
-      <Image style={style.header}
-        source={require('/home/callum/ReactNative/firstApp/firstApp/assets/images/inTune-header.jpg')}
-
-      />
-      <Text style={style.test}> Welcome!</Text>
-
-
+    <View style={style.main}>
+      <Text>Home Screen</Text>
     </View>
+  );
+}
+
+
+const Stack = createNativeStackNavigator();
+
+export default function index() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }

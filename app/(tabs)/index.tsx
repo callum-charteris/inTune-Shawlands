@@ -1,7 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet } from "react-native";
-import { Image } from 'expo-image';
-import { useFonts } from 'expo-font';
+import { StyleSheet, Text, View } from "react-native";
+
+//importing components
+import ImageViewer from '@/components/ImageViewer';
+
+//variables 
+const placeHolderImage = require('@/assets/images/teacheroftheyear.jpg');
 
 /*Can create style sheets, which is like CSS in html*/
 /*Can have all styles in your sheet with identifierss*/
@@ -18,15 +22,14 @@ const style = StyleSheet.create({
   header: {
     //CSS stuff for the header
     flex: 0.5,
-    padding: 15,
+    padding: 10,
     fontSize: 20,
     fontFamily: 'Impact'
   },
 
   image: {
     //CSS like stuff for the image
-    flex: 9,
-    width: '100%',
+    flex: 10,
   },
 
 });
@@ -39,12 +42,9 @@ export default function Index() {
     the style is self contained in the view tag*/
     <View style={style.main}>
       <Text style={style.header}>Welcome to InTune Shawlands!</Text>
-
-      <Image
-        style={style.image}
-        source={require('/home/callum/ReactNative/firstApp/firstApp/assets/images/teacheroftheyear.jpg')}
-      />
-
+      <View style={style.image}>
+        <ImageViewer imgSource={placeHolderImage} />
+      </View>
     </View>
   );
 }

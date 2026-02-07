@@ -3,7 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from "react-native";
 
 //variables 
-const placeHolderImage = require('@/assets/images/teacheroftheyear.jpg');
+const teachOfYear = require('@/assets/images/teacheroftheyear.jpg');
+const piano1 = require('@/assets/images/piano.png');
+const piano2 = require('@/assets/images/piano-anne-new-photo.jpg');
+const chalkboard = require('@/assets/images/chalkboard.png');
 
 /*Can create style sheets, which is like CSS in html*/
 /*Can have all styles in your sheet with identifierss*/
@@ -21,29 +24,22 @@ const style = StyleSheet.create({
     padding: 10,
     fontSize: 20,
     fontFamily: 'Impact',
-    backgroundColor: 'blue',
     textAlign: 'center',
   },
 
   image: {
     //CSS like stuff for the image
     flex: 10,
-    backgroundColor: 'red',
   },
 
   row: {
     flex: 1,
-    backgroundColor: 'orange',
     flexDirection: 'row',
-    borderWidth: 1,
   },
 
   photo: {
     flex: 1,
-    backgroundColor: 'green',
-    borderWidth: 1,
     margin: 5,
-    borderRadius: 18,
   }
 
 });
@@ -59,14 +55,23 @@ export default function Index() {
       <View style={style.image} >
         <View style={style.row} >
           <View style={style.photo} >
-            <ImageViewer imgSource={placeHolderImage} />
+            <ImageViewer imgSource={teachOfYear} />
           </View>
-          <View style={style.photo} />
+
+          <View style={style.photo} >
+            <ImageViewer imgSource={piano1} />
+          </View>
         </View>
+
         <View style={style.row} >
-          <View style={style.photo} />
-          <View style={style.photo} />
+          <View style={style.photo} >
+            <ImageViewer imgSource={chalkboard} />
+          </View>
+          <View style={style.photo} >
+            <ImageViewer imgSource={piano2} />
+          </View>
         </View>
+
       </View>
     </View >
   );
